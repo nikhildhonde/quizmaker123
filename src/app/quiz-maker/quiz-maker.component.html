@@ -1,0 +1,35 @@
+<body>
+  <h3 class="align-item">Quiz Maker</h3>
+
+  <div class="align-item">
+    <!-- this part for selection of category -->
+    <div>
+      <select id="categorySelect" (change)="changeQuizCategory($event)">
+        <option value="-1">Select a category</option>
+        <option *ngFor="let category of category" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+    </div>
+
+    <!-- this part for selection of difficulty level -->
+    <div>
+      <select id="difficultySelect" (change)="changeDifficultyLevel($event)">
+        <option>Select difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Difficult</option>
+      </select>
+    </div>
+
+    <!-- this button create a quiz  -->
+    <div>
+      <button id="createBtn" (click)="createQuiz()">Create quiz</button>
+    </div>
+  </div>
+
+
+  <app-quiz-questions [questions]="questions" [correctAns]="correctAns"></app-quiz-questions>
+
+
+</body>

@@ -1,0 +1,36 @@
+.align-item{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+select{
+    width: 16rem;
+    height: 2rem;
+}
+button{
+    height: 2rem;
+
+}
+
+.ali-questions{
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+}
+
+.ali-option{
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.info-style{
+    font-size: medium;
+    font-weight: 600;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+

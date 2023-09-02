@@ -1,0 +1,34 @@
+<!-- show questions when user clicking on the CreateQuiz button -->
+<div class="card">
+    <div *ngIf="questions && questions.length > 0">
+
+        <div class="align-item"  *ngFor="let question of questions; let questionsIndex = index">
+            <p class="ali-questions">{{ changeFormat(question.question) }}</p>
+
+            <div class="ali-options">
+                <div class="ali-option" *ngFor="let option of question.options">
+                    <button (click)="clickOption(option, questionsIndex)" [ngClass]="{ 
+          'option-btn': true,
+          success:
+          clickedOption(option, questionsIndex) ||
+          correctAnswer(option, questionsIndex),
+          error: wrongAnswer(option, questionsIndex),
+          disabled:isQuizSubmitted }" id="clickOption">
+                        {{ changeFormat(option) }}
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    
+    <!-- This button submit the quiz and navigate to the Quiz Result page -->
+    <div class="adj-btn" *ngIf="!isQuizResultPage ">
+        <button class="btn-style"  (click)="submitQuiz()" *ngIf="allOptionsSelected && questions.length>0">
+            submit
+        </button>
+        <button>add me</button>
+    </div>
+</div>

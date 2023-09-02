@@ -1,0 +1,55 @@
+.ali-options {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.ali-questions {
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-style-align{
+    display: flex;
+}
+
+.btn-style {
+  width: 50%;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+}
+
+.adj-btn{
+    display: flex;
+    justify-content: center;
+}
+/* .align-item {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  } */
+
+.option-btn {
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.option-btn.success {
+  background-color: green;
+  color: #fff;
+}
+
+.option-btn.error {
+  background-color: red;
+  color: #fff;
+}
+
+.option-btn.disabled {
+  pointer-events: none;
+}

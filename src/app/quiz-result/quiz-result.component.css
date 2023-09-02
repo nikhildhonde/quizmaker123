@@ -1,0 +1,27 @@
+.btn-style {
+  width: 50%;
+  cursor: pointer;
+}
+.align-item {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.card {
+  padding-left: 300px;
+  margin-top: 25px;
+}
+
+.marks {
+  background: black;
+}
+
+.marks.bg-red {
+  background: red;
+}
+.marks.bg-yellow {
+  background: yellow;
+}
+.marks.bg-green {
+  background: green;
+}

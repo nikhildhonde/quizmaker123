@@ -1,0 +1,26 @@
+<body>
+    <div>
+        <div>
+            <h3 class="align-item">Quiz Result</h3>
+        </div>
+        
+        <app-quiz-questions [questions]="questions" [correctAns]="correctAns" [toJudge]="selectedAnswer"
+            [isQuizResultPage]="true">
+
+        </app-quiz-questions>
+        <!--Shows the obtained marks after submitting the quiz   -->
+        <div class="align-item" *ngIf="marksObtained">
+            <p
+                [ngClass]="{'marks':true, 'bg-red': marks === 0|| marks === 1, 'bg-yellow': marks === 2 || marks === 3, 'bg-green': marks === 4 || marks === 5, }">
+                Your Marks:{{marks}} out of {{questions.length}}
+            </p>
+
+        </div>
+
+        <!-- Navigate to create new quiz -->
+
+        <div class="align-item">
+            <button class="btn-style" (click)="backToCreateQuiz()">Create New Quiz</button>
+        </div>
+    </div>
+</body>
